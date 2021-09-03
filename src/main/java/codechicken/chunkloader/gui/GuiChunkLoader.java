@@ -78,20 +78,16 @@ public class GuiChunkLoader extends Screen {
         GlStateManager._disableLighting();
         GlStateManager._disableDepthTest();
 
-        /*drawCentered(mStack, new TranslationTextComponent("chickenchunks.gui.name"), width / 2 - 40, height / 2 - 74, 0x303030);*/
         if (tile.owner != null) {
             drawCentered(mStack, tile.ownerName, width / 2 + 44, height / 2 - 72, 0x801080);
         }
         drawCentered(mStack, new TranslationTextComponent("chickenchunks.gui.radius"), width / 2 - 40, height / 2 - 72, 0x404040);
         drawCentered(mStack, new StringTextComponent("" + tile.radius), width / 2 - 40, height / 2 - 54, 0xFFFFFF);
 
-//        drawCentered(mStack, new StringTextComponent(tile.getEnergyStored()+":"+tile.getMaxEnergyStored()), width / 2 - 50, height / 2 - 45, 0xFFFFFF);
 
         int chunks = tile.countLoadedChunks();
         drawCentered(mStack, new TranslationTextComponent(chunks == 1 ? "chickenchunks.gui.chunk" : "chickenchunks.gui.chunks", chunks), width / 2 - 39, height / 2 - 39, 0x108000);
 
-        //TODO: sradius = "Total "+ChunkLoaderManager.activeChunkLoaders+"/"+ChunkLoaderManager.allowedChunkloaders+" Chunks";
-//        fontRenderer.drawString(sradius, width / 2 - fontRenderer.getStringWidth(sradius) / 2, height / 2 - 8, 0x108000);
 
         GlStateManager._enableLighting();
         GlStateManager._enableDepthTest();

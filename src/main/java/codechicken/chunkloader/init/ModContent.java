@@ -3,6 +3,7 @@ package codechicken.chunkloader.init;
 import codechicken.chunkloader.block.BlockChunkLoader;
 import codechicken.chunkloader.tile.TileChunkLoader;
 import net.minecraft.block.Block;
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -36,6 +37,8 @@ public class ModContent {
     @ObjectHolder ("chunk_loader")
     public static TileEntityType<TileChunkLoader> tileChunkLoaderType;
     //endregion
+
+//    public static ContainerType<>
 
     @SubscribeEvent
     public static void onRegisterBlocks(RegistryEvent.Register<Block> event) {
